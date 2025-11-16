@@ -31,6 +31,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'SirVer/ultisnips'
     Plug 'ap/vim-css-color'
     Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+    Plug 'vim-fuzzbox/fuzzbox.vim'
 
 call plug#end()
 
@@ -75,6 +76,10 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir="~/.vim/plugged/ultisnips"
 let g:UltiSnipsSnippetDirectories="~/.vim/plugged/ultisnips"
 let g:UltiSnipsSnippetStorageDirectoryForUltiSnipsEdit="~/.vim/plugged/ultisnips"
+
+"fuzzy find
+nnoremap <silent> <leader>ff :FuzzyFiles<CR>
+nnoremap <silent> <leader>fg :FuzzyGrep<CR>
 
 "insert mappings
 imap jh <ESC>
